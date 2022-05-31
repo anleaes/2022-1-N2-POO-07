@@ -1,0 +1,17 @@
+@startuml Diagrama
+title Diagrama Prontuario Nutricional 
+
+class Pessoa{
+    - nome: String 
+    - endereco: String 
+    - documento: Int
+    - cad_SUS: String 
+    - id_prontuario: Int 
+    - nascimento: Date 
+    - telefone: String 
+    - nome_emer: String 
+    - telefone_emer: String 
+    + construtor (nome, endereco, documento, id_prontuario, nascimento, telefone, nome_emer, telefone_emer)
+    + 
+
+}
