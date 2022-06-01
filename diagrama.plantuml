@@ -12,6 +12,6 @@ class Pessoa{
     - nome_emer: String 
     - telefone_emer: String 
     + construtor (nome, endereco, documento, id_prontuario, nascimento, telefone, nome_emer, telefone_emer)
-    + funcao 
+    + funcao ( alteracao para teste commit rascunhos )
 
 }
