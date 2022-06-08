@@ -19,7 +19,7 @@ class Paciente{
     + alteracao 1 //
 }
 
-class profissional{ 
+class Profissional{ 
     - nome: String
     - tipo_conselho: String
 
@@ -36,12 +36,18 @@ class Leito{
     - tipo_leito: String
     + construtor //
 }
+class Prescricao{
+    - item: String
+    - profissional: Profissional
+}
 
 class Prontuario{ 
     //recebe todo mundo
     - paciente: Paciente
     - cid: CID 
-    - id_prontuario: Int 
+    - prescricao: Prescricao
+    - id_prontuario: Int
+
     - medico: Medico //expandir profissionais
 
 }    
