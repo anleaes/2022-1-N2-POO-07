@@ -49,6 +49,6 @@ class Prontuario{
     - id_prontuario: Int
 
     - medico: Medico //expandir profissionais
-
 }    
+
 
