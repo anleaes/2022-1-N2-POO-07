@@ -1,54 +1,56 @@
 @startuml Diagrama
 title Diagrama Prontuario Hospitalar 
 
-
+class Registro{ 
+    - registro_pcte: int 
+    - paciente: Paciente
+    + construtor (regsitro_pcte, paciente)
+}
 class CID{
     - cid: String  
-    + construtor //
-
+    + construtor (cid)
 }
 class Paciente{
     - nome: String 
     - endereco: String 
     - documento: Int
-    - nascimento: Date 
-    - telefone: String 
-    - telefone_emer: String
-    - prontuario: Prontuario 
-    + construtor (nome, endereco, documento, nascimento, telefone, telefone_emer)
-    + alteracao 1 //
+    - nascimento: String 
+    - registro: Registro
+    + construtor (nome, endereco, documento, nascimento, registro)
 }
-
 class Profissional{ 
     - nome: String
     - tipo_conselho: String
-
-    //fazer construtor 
+    - numero_conselho:String 
+    + construtor (nome, tipo_conselho, numero_conselho)
 }
-
-class Servico{
-    - codigo_serv: int
-    + construtor //
-}
-
 class Leito{
     - un_internacao: String
     - tipo_leito: String
-    + construtor //
+    + construtor (un_internacao, tipo_leito)
 }
 class Prescricao{
     - item: String
     - profissional: Profissional
+    - registro: Registro
+    + construtor (item, profissional, registro)
+    + valida_medico (profissional)
 }
-
-class Prontuario{ 
-    //recebe todo mundo
-    - paciente: Paciente
-    - cid: CID 
+class Atendimento {
+    - evolucao: string 
+    - sinais: String
+    - profissional: Profissional
     - prescricao: Prescricao
-    - id_prontuario: Int
-
-    - medico: Medico //expandir profissionais
+    + construtor (evolucao, sinais, profissional, prescricao)
+}
+class Prontuario{ 
+    - cid: CID 
+    - paciente: Paciente
+    - profissional:Profissional
+    - leito: Leito
+    - prescricao: Prescricao
+    - atendimento: Atendimento
+    + construtor (cid, paciente, profissional, leito, prescricao, atendimento)
 }    
 
 
