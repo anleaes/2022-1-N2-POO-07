@@ -1,17 +1,48 @@
 @startuml Diagrama
-title Diagrama Prontuario Nutricional 
+title Diagrama Prontuario Hospitalar 
 
-class Pessoa{
+
+class CID{
+    - cid: String  
+    + construtor //
+
+}
+class Paciente{
     - nome: String 
     - endereco: String 
     - documento: Int
-    - cad_SUS: String 
-    - id_prontuario: Int 
     - nascimento: Date 
     - telefone: String 
-    - nome_emer: String 
-    - telefone_emer: String 
-    + construtor (nome, endereco, documento, id_prontuario, nascimento, telefone, nome_emer, telefone_emer)
-    + alteracao 1 
-
+    - telefone_emer: String
+    - prontuario: Prontuario 
+    + construtor (nome, endereco, documento, nascimento, telefone, telefone_emer)
+    + alteracao 1 //
 }
+
+class profissional{ 
+    - nome: String
+    - tipo_conselho: String
+
+    //fazer construtor 
+}
+
+class Servico{
+    - codigo_serv: int
+    + construtor //
+}
+
+class Leito{
+    - un_internacao: String
+    - tipo_leito: String
+    + construtor //
+}
+
+class Prontuario{ 
+    //recebe todo mundo
+    - paciente: Paciente
+    - cid: CID 
+    - id_prontuario: Int 
+    - medico: Medico //expandir profissionais
+
+}    
+
