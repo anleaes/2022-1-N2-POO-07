@@ -5,6 +5,7 @@ class Registro{
     - registro_pcte: int 
     - paciente: Paciente
     + construtor (regsitro_pcte, paciente)
+    + atribui_registro ()
 }
 class CID{
     - cid: String  
@@ -17,6 +18,7 @@ class Paciente{
     - nascimento: String 
     - registro_pcte: Registro
     + construtor (nome, endereco, documento, nascimento, registro)
+    + print_paciente ()
 }
 class Profissional{ 
     - nome: String
@@ -42,6 +44,7 @@ class Atendimento {
     - profissional: Profissional
     - prescricao: Prescricao
     + construtor (evolucao, sinais, profissional, prescricao)
+    + print_atendimento ()
 }
 class Prontuario{ 
     - cid: CID 
@@ -51,6 +54,7 @@ class Prontuario{
     - prescricao: Prescricao
     - atendimento: Atendimento
     + construtor (cid, paciente, profissional, leito, prescricao, atendimento)
+    + mostra_prontuario ()
 }    
 
 Prontuario*--CID
