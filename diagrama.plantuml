@@ -53,4 +53,14 @@ class Prontuario{
     + construtor (cid, paciente, profissional, leito, prescricao, atendimento)
 }    
 
-
+Prontuario*--CID
+Prontuario*--Paciente
+Prontuario*--Prescricao 
+Prontuario*--Profissional
+Prontuario*--Leito
+Prontuario*--Atendimento
+Atendimento --|> Profissional
+Atendimento --|>Prescricao
+Registro <|--|>Paciente
+Prescricao --|>Profissional
+Prescricao --|>Registro

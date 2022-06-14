@@ -5,7 +5,7 @@ from leito import Leito
 from prescricao import Prescricao
 from atendimento import Atendimento
 
-class Prontuario (Paciente, Cid, Profissional, Leito, Prescricao, Atendimento), teste:
+class Prontuario (Paciente, Cid, Profissional, Leito, Prescricao, Atendimento):
     def __init__(self, teste):
         super().__init__()
         self._teste = teste

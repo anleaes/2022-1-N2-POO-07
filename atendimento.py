@@ -1,7 +1,7 @@
 from profissional import Profissional
 from prescricao import Prescricao
 
-class Atendimento (Profissional, Prescricao):
+class Atendimento(Profissional, Prescricao):
     def __init__(self, item, profissional, evolucao, sinais):
         super().__init__()
         self._item = item
