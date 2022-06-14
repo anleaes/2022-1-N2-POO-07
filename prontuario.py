@@ -6,8 +6,10 @@ from prescricao import Prescricao
 from atendimento import Atendimento
 
 class Prontuario (Paciente, Cid, Profissional, Leito, Prescricao, Atendimento):
-    def __init__(self, teste):
+    def __init__(self):
         super().__init__()
-        self._teste = teste
+    def mostra_prontuario(self):
+        self.prontuario.print_paciente
+        self.prontuario.
 
-    
+#inseri atributo teste, pois não sei como usar esta classe para uma unica função de mostrar as informações de todas as classes    
