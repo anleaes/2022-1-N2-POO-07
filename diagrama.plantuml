@@ -18,18 +18,20 @@ class Paciente{
     - nascimento: String 
     - registro_pcte: Registro
     + construtor (nome, endereco, documento, nascimento, registro)
-    + print_paciente ()
+    + mostra_paciente ()
 }
 class Profissional{ 
     - nome: String
     - conselho: String
     - num_conselho:String 
     + construtor (nome, tipo_conselho, numero_conselho)
+    + mostra_profissional ()
 }
 class Leito{
     - un_internacao: String
     - tipo_leito: String
     + construtor (un_internacao, tipo_leito)
+    + mostra_leito()
 }
 class Prescricao{
     - item: String
@@ -44,7 +46,7 @@ class Atendimento {
     - profissional: Profissional
     - prescricao: Prescricao
     + construtor (evolucao, sinais, profissional, prescricao)
-    + print_atendimento ()
+    + mostra_atendimento ()
 }
 class Prontuario{ 
     - cid: CID 
