@@ -9,7 +9,9 @@ class Prontuario (Paciente, Cid, Profissional, Leito, Prescricao, Atendimento):
     def __init__(self):
         super().__init__()
     def mostra_prontuario(self):
-        self.prontuario.print_paciente
-        self.prontuario.mostra_profissional
-
-#inseri atributo teste, pois não sei como usar esta classe para uma unica função de mostrar as informações de todas as classes    
+        self.prontuario.paciente.mostra_paciente()
+        self.prontuario.profissional.mostra_profissional()
+        self.prontuario.atendimento.mostra_atendimento()
+        self.prontuario.leito.mostra_leito()
+        self.prontuario.prescricao.valida_medico()
+        self.prontuario.cid()

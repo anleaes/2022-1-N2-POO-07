@@ -9,7 +9,7 @@ class paciente(Registro):
         self._documento = documento
         self._nascimento - nascimento
         
-    def print_paciente(self):
+    def mostra_paciente(self):
         print (f'\n DADOS DO PACIENTE: ')
         print(f'\nNome: {self.paciente.nome}')
         print(f'\nData de Nacimento: {self.paciente.nascimento} ')
